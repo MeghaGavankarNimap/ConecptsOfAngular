@@ -1,0 +1,91 @@
+of and from oprator:
+of: 
+The of operator is used to create an observable sequence from a list of values. It emits each value in sequence and then completes.
+of operator will give value as it is like "hello" as it is.
+
+from:
+The from operator is used to convert various other objects and data types into Observables. It can convert an array, an iterable, a Promise, or an observable-like object into an observable sequence.
+From operator will give the element one by one like loop.
+
+map: This operator is used to transform the data emitted by an observable. 
+
+Filter:This operator is used to filter the data emitted by an observable. 
+Mergemap:This operator is used to merge multiple observables into a single observable.
+
+The forkJoin operator in RxJS is used to wait for multiple observables to complete and then emit an array of the last values emitted by each observable.
+eg.
+loaduser(){
+    req1=""
+    re12=""
+    forkjoin(req1,req2).subsribe(val=>{console.log(val)})
+}
+
+fromEvent:  fromEvent is used to create an observable that emits an event when the user types in the (search) input.
+
+switchMap: The switchMap operator in RxJS is used to transform the emissions from an observable by applying a given function and then flattening the result into a new observable. This operator is useful when you want to make a request based on the current value of an observable and then switch to a new observable when the value changes.
+
+distinctUntilChanged: distinctUntilChanged operator is used to only emit the value when it changes.
+
+debounceTime operator is used to wait for the user to stop typing before emitting the value.
+
+concatMap: It is an operator in RxJS that is used to flatten an Observable by applying a mapping function to each value, and then concatenating the resulting Observables in the order they were emitted.
+eg.
+import { from, interval } from 'rxjs';
+import { concatMap, take } from 'rxjs/operators';
+
+const source = from([1, 2, 3]);
+
+const result = source.pipe(
+  mergeMap(value =>
+    interval(1000).pipe(
+      take(3),
+      map(innerValue => `${value}-${innerValue}`)
+    )
+  )
+);
+
+result.subscribe(console.log);
+
+result.subscribe(console.log);p,
+
+in mergemap ,will emit observable after particular delay but in concatmap,will emit each observable after in between of each delay gien time.
+in concatemap,it wait for one to complete before moving on to the next.
+
+
+so mergemap will not wait for innerobservable function to complete.it emits the value immediately...
+
+
+<!-- sir code -->
+import { Component, OnInit } from '@angular/core';
+import { from, interval } from 'rxjs';
+import { concatMap, map, mergeMap, take } from 'rxjs/operators';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent implements OnInit {
+  name = 'Angular';
+  source = from([1, 2, 3]);
+
+  ngOnInit() {
+    let result = this.source.pipe(
+      mergeMap((value) =>
+        interval(1000).pipe(
+          take(3),
+          // map((innerValue) => `${value}-${innerValue}`)
+        )
+      )
+    );
+
+    let result1 = this.source.pipe(
+      concatMap((ev) => interval(1000).pipe(take(3)))
+    );
+
+    result1.subscribe(x => console.log(x, "ConcatMap"));
+
+    // result.subscribe(x => console.log(x, "mergeMap"));
+  }
+}
+

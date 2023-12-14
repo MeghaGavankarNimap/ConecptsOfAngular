@@ -1,0 +1,16 @@
+if reponse data is in object or we want to console the data then console,log(dta) will give [object object]bcoz js conver js tring to string which gives this obj obj.so i we wan to console object then used JSON.stringify(dta) to convert js objct to json string.
+
+child
+@output(data)eventEmitter<any>=new eventEmitter()
+
+
+data.emit(val)
+
+parent
+<app-child (data)=fun($event)></>
+
+fun(val){
+    final=this.value
+}
+
+
