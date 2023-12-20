@@ -14,3 +14,40 @@ fun(val){
 }
 
 
+
+Datasources
+matHeaderCellDef and matCellDef Directives are structural directives used.
+they are used to define just their role.
+object in each row is accessible via the let variable syntax.
+
+
+to pass data throufh URL:
+types of route paramter
+query parameters: if you are using query paramter then no neet to define in routing file.
+and to access data key value pair use router.queeyparam.subscribe.
+path?and key-value will get separated by &
+
+
+required and optional paramter:
+  this.router.navigate(['/user', userId, { name: userName }])
+
+  here userid is required and name is optional(as it is key value pair).
+
+  SO IN ROUTING FILE IF I DONT WRITE name then also will not give any error becoz it is optional.but id is required .
+
+
+
+
+navigation extras:
+Data stored in state will not expose in url.
+just have to add navigation extra object containing state onjet and in that required value.then this.route.navigate([],{navgatioextras oject})
+
+dont write in routing file anything.no need.
+
+in html access that state using activated route like route.quryparam(data)
+
+
+
+
+
+
