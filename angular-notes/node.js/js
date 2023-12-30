@@ -1,0 +1,2 @@
+Math.random(): will take random values between  0 to 1.
+Math.floor(): will skip  values after decimal.return only whole number.

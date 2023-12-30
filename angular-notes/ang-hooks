@@ -26,6 +26,20 @@ ngaftercontentchecked:
 it is called when every change detection in angular.
 
 
+content projection refers to the ability to insert and project content from a parent component into a child component.
 
+
+ngaterviewinit:
+it is called when view of component will get fully initilized(view of parant or child or both)
+
+ngafterviewchecked:
+it is used to check components view.basically it is used for any change in view of component.it will not called for 1st initialzied but used for any chnage in view.
+
+above is same for ngaftercontentinit and ngaftercontentchecked.
+
+
+DateAdapter is imported from @angular/material/core.
+An instance of DateAdapter is injected into the component constructor through dependency injection.
+The setLocale('en-GB') method is called to set the locale to 'en-GB'.
 
 

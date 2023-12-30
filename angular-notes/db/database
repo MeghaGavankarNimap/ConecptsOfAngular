@@ -1,0 +1,57 @@
+foreign key is the primary key of the another table.this key is used to connect two tables.
+left join includes natural join.
+it selects all matching rows from both table and rows which are in left table and not in right table.
+
+select colmun,column from table(left) left outer join table(right) where(col.table1=col.table2)
+
+
+
+right outer join
+it selects all matching rows(any one same col in both table)and all rows from right table asnd not in right table.
+
+self join:
+it contains composite primary key.means primary key which created using two column.
+make alias of of table.
+select value want to select from table as t1,study as t2 where s1.t1=s2.t2 && c1.t1<>c1.t2
+
+Equi join:
+
+ 
+1)to check null values use IS NULL.
+ SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+update:
+UPDATE Customers
+SET ContactName='Juan'
+WHERE Country='Mexico';
+
+
+average:
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+as:
+SELECT AVG(Price) AS [average price]
+FROM Products;
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+eg.SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE '%a';
+eg.SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE 'a_h';
+-- _ contain single character
+
+wildcard:
+SELECT * FROM Customers
+WHERE city LIKE '%L%';
+
+The IN operator allows you to specify multiple values in a WHERE clause.
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');

@@ -49,5 +49,29 @@ in html access that state using activated route like route.quryparam(data)
 
 
 
+gaurds:
+difference in canactivate and canload is that in can load module is not loaded 1st but in can activate module is loaded 1st whether t will go to requested route or not.
 
+
+select option dropdoen:
+when any option get selected then value property of that select option will goes into the formcontrol.
+so if value property is dynamic then use property binding [value]="item.id" like this to get the value in value atribute of option.
+
+angular ts file:
+we write parivate instance:imported service etc which in constructor of class so that we can access that instance within a class.
+When you declare a property in the constructor with the private keyword, it does become a class property, and it's accessible throughout the class, not just within the constructor.
+
+node.js app install then it includes node runtime env,npm.
+devDependencies:
+Include tools and libraries that are necessary for development but not needed for the production runtime.
+
+changeDetectionstrategy :it is used to deetct chnages automatically that it tell how chage deatction should occur in angular.
+it contain onPush and default.
+ChangeDetectionStrategy is an attribute of the @Component decorator in Angular, and it defines how change detection should be performed for a specific component.
+
+ChangeDetectionRef:it is used to deetct chnages manually
+detectchange , markforcheck
+ChangeDetectorRef is a service in Angular that provides methods to manually trigger change detection for a component and its children.
+OnPush means that the change detection will only occur if the component's input properties change or if an event is triggered from within the component.
+Default means that the change detection will run whenever there is any change in the application, including changes in the component's own state.
 
