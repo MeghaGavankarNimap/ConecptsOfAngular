@@ -75,3 +75,26 @@ ChangeDetectorRef is a service in Angular that provides methods to manually trig
 OnPush means that the change detection will only occur if the component's input properties change or if an event is triggered from within the component.
 Default means that the change detection will run whenever there is any change in the application, including changes in the component's own state.
 
+
+
+session,local storage and cookies:
+sessionStorage data gets cleared when the page session ends. that is tab of a browser is closed .
+
+
+Local storage has 4 methods:
+
+setItem() Method – This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.
+localStorage.setItem(key, value)
+getItem() Method – This method takes one parameter that is key which is used to get the value stored with a particular key name.
+localStorage.getItem(key)
+removeItem() Method – This is method is used to remove the value stored in the memory in reference to key.
+localStorage.removeItem(key)
+clear() Method – This method is used to clear all the values stored in localstorage.
+
+localstorage:
+When a user closes the tab or window, the data stored in localStorage will not be automatically removed.
+
+
+Angular decorators:
+Decorators are design patterns used to isolate the modification or decoration of a class without modifying the source code.
+
