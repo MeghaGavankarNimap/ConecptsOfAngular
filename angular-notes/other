@@ -98,3 +98,12 @@ When a user closes the tab or window, the data stored in localStorage will not b
 Angular decorators:
 Decorators are design patterns used to isolate the modification or decoration of a class without modifying the source code.
 
+extends:
+it is used to access methods and properties of parents class in child class.
+implements is used to access the interface in class.
+
+
+Cookies:
+Cookies are categorized into two types: session cookies and persistent cookies.
+
+

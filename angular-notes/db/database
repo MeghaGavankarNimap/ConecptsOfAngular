@@ -55,3 +55,30 @@ WHERE city LIKE '%L%';
 The IN operator allows you to specify multiple values in a WHERE clause.
 SELECT * FROM Customers
 WHERE Country IN ('Germany', 'France', 'UK');
+
+
+Table of Content
+DDL (Data Definition Language):create,alter,truncate,drop
+DML (Data Manipulation Language):delete,insert,update
+TCL (Transaction Control Language):commit,rollback,savepoint
+DQL (Data Query Language):select
+DCL (Data Control Language):grant,revoke
+
+ACID properties
+Atomicity = Either all or none,if any transaction is failed before commit(update in database) then we will get rollback(undo).A failed transaction will always restart.
+consistancy=Money before transaction(payment start)and money after transaction(payment end)sum of money should be same
+Isoloation=to convert parallel scheduled into serial scheduled.so that serial will become consistant.
+Durability= transaction should be complete totally.chnages should be permanant.
+
+Relationships in DBMS:
+one to one= there are two differnert table having one one primary key.take these two primary key together and create third table.and try to conect previous one table and nelwy pri key vala table.
+eg.emp dept
+question will ask as which is prmary key in both table.so ans is both will be primary key.
+
+one to many=cust can give many orders.
+eg.cust and orders
+so in peri val table ,cust id will be primary key.because cust ca give many orders but order is unique for pericular cust.
+many to one=
+
+many to many=multiple student can study multiple courses.that is here no one is primary key.imp is no of tables cannot be reduced.it will be 3 as it is.
+eg.student-study-course
