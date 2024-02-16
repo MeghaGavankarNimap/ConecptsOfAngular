@@ -1,5 +1,5 @@
 node js is a js runtime environment built on google's open source v8 js engine.
-pros: node is single threaded hence it is fats and scalable.
+pros: node is single threaded hence it is fast and scalable.
 
 to use node
 command=node file.js

@@ -23,7 +23,7 @@ object in each row is accessible via the let variable syntax.
 
 to pass data throufh URL:
 types of route paramter
-query parameters: if you are using query paramter then no neet to define in routing file.
+query parameters: if you are using query paramter then no need to define in routing file.
 and to access data key value pair use router.queeyparam.subscribe.
 path?and key-value will get separated by &
 
@@ -65,7 +65,7 @@ node.js app install then it includes node runtime env,npm.
 devDependencies:
 Include tools and libraries that are necessary for development but not needed for the production runtime.
 
-changeDetectionstrategy :it is used to deetct chnages automatically that it tell how chage deatction should occur in angular.
+changeDetectionstrategy :it is used to detect changes automatically that it tell how chage deatction should occur in angular.
 it contain onPush and default.
 ChangeDetectionStrategy is an attribute of the @Component decorator in Angular, and it defines how change detection should be performed for a specific component.
 
@@ -106,4 +106,110 @@ implements is used to access the interface in class.
 Cookies:
 Cookies are categorized into two types: session cookies and persistent cookies.
 
+Dependency Injection: 
+ DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them.
 
+
+ let a = ''
+if(typeof a == 'string' ? a!= '' : Object.entries(a).length) return
+
+
+we call markAllAsTouched() method on the FormGroup to make the form controls as touched so that error messages are displayed.
+
+
+Public:
+Typescript members are public by default.
+When a member is marked private, it cannot be accessed from outside of its containing class".
+
+Use setImmediate() when you want to execute some function asynchronously, but as soon as possible and after finishing the current block.
+Use setTimeout() when you want to execute some function asynchronously, after a specified delay and after finishing the current block.
+
+
+Pure and impure pipes:
+By default pipes are pure:true,so when input property will chnage pipes will not detect but if any template referce chnage then it will detect chnage.so amke pipes to pure:false for any chnage detection.
+pure pies execute when any input property got chnaged.
+impure pipes:
+The pipe function is executed every time change detection runs, regardless of whether the inputs have changed.
+
+
+This keyword
+call,apply,bind method
+If you have a function that's not directly part of an object but needs to access the properties of an object, you might use call() or apply() to set the context explicitly.
+
+if object contains function then can use obj.fun name()
+if fun and obj are different that fun is not inside obj then use call apply bind and use fun.call(objname)
+
+ngAfterContentchecked is basically used to checked content of compo and its children.
+it is used i content child to .if data is dynamic then to check wheteher data has been access from parent into child.
+same for ngafterviewchecked only insted of conetent ,view will be there.
+
+
+Forms
+when i console this.formgrpname then i get in console as:
+FormGroup {_hasOwnPendingAsyncValidator: false, _parent: null, pristine: true, touched: false, _onCollectionChange: ƒ, …}
+controls
+: 
+Password
+: 
+FormControl
+errors
+: 
+{required: true}
+pristine
+: 
+true
+status
+: 
+"INVALID"
+statusChanges
+: 
+EventEmitter_ {_isScalar: false, observers: Array(0), closed: false, isStopped: false, hasError: false, …}
+touched
+: 
+true
+value
+: 
+""
+valueChanges
+: 
+
+
+\d is a metacharacter that matches any digit from 0 to 9
+\w which matches all word characters (a-z, A-Z, 0-9, and _)
+\D which matches all non-digit characters. It is the opposite of \d
+\W which matches all non-word characters
+\s which matches all white spaces including the spacebar, tab, and return
+
+
+myForm.get('name').hasError('validatorName'):hasError is used check condition of validators name.
+
+<!-- to get uploaded file -->
+getFileDetails(e) {
+    // console.log(JSON.stringify(e.target.files))
+    this.files = e.target.files;
+    if(this.files.length>0){
+      for(let i=0;i<this.files.length;i++){
+        console.log(this.files[i].name)
+        console.log(this.files[i].size)
+        console.log(this.files[i].type)
+      }
+    }
+    // console.log("img"+this.files)
+  }
+
+<!-- formData :used to send data to http req .have key value pair -->
+  this.formData = new FormData();
+    for (const file of this.files) {
+      this.formData.append("avatar", file);
+    }
+
+
+<!-- ng switch case -->
+<div [ngSwitch]="authService.isLoggedIn()">
+    <div *ngSwitchCase="true">
+        <!-- Content when authService.isLoggedIn() returns true -->
+    </div>
+    <div *ngSwitchDefault>
+        <!-- Content when authService.isLoggedIn() returns false or any falsy value -->
+    </div>
+</div>

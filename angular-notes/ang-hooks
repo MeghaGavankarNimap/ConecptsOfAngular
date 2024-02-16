@@ -1,7 +1,7 @@
 ngOnchages:It only trigger when any of the input property of parent or child will chnage onlt then this hooke triggers.
 and if ay input property chnaages then also it will update in child compo property ony point is we will get that value that has  changed and previous and current value.when data bound input property will change of child.
 ngDocheck:used for custom change detection.when angular fails to detetch chnage in input properties then it will allow to implement custom change detection.
-ngaftercontentinit=used to check whether the component is fully iitialized or not.
+ngaftercontentinit=used to check whether the component is fully initialized or not.
  in parent html file
  <child [data]="parentdata" >
  <h1 #val>jhfjkv jkfkgjk eruifenvnhe ioeeoijkjd</h1>

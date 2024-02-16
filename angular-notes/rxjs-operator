@@ -104,7 +104,7 @@ switchMap:when i create one observable and emit a value and value will go in inn
 
 Exaustmap:when i create one observable and emit a value and value will go in inner observables.here also inner obs will emit value concurrentltly but when outer obse emit new value and innser obs is still active or emiiting value then exast map will ignore outer obs emitting value.
  
-forkjoin : when i create one observable and emitted  value will go in inner observables then forkjoin will wait for all obs to complete then emit last value from all obs.
+forkjoin :when i create one observable and emitted value will go in inner observables then forkjoin will wait for all obs to complete then emit last value from all obs.
 
 const { mergeMap, flatMap, concatMap, switchMap, exhaustMap } = Rx.operators;
 
